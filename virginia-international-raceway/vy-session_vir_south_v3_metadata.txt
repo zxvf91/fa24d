@@ -1,0 +1,11 @@
+This file is created using RaceChrono Pro v8.0.8 ( http://racechrono.com/ ).																																					
+Format	3																																				
+Session title	VIR South																																				
+Session type	Lap timing																																				
+Track name	VIR South																																				
+Driver name																																					
+Created	20/07/2023	14:30																																			
+Note																																					
+																																					
+timestamp	fragment_id	lap_number	elapsed_time	distance_traveled	accuracy	altitude	bearing	device_battery_level	device_update_rate	fix_type	latitude	longitude	satellites	speed	combined_acc	device_update_rate	lateral_acc	lean_angle	longitudinal_acc	speed	accelerator_pos	brake_pos	coolant_temp	engine_oil_pressure	engine_oil_temp	lateral_acc	rpm	speed	steering_angle	device_update_rate	x_acc	y_acc	z_acc	device_update_rate	x_rate_of_rotation	y_rate_of_rotation	z_rate_of_rotation
+unix time			s	m	m	m	deg	%	Hz		deg	deg	sats	m/s	G	Hz	G	deg	G	m/s	%	%	.C	kPa	.C	G	rpm	m/s	deg	Hz	G	G	G	Hz	deg/s	deg/s	deg/s
