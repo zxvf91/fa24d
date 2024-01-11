@@ -1,3 +1,6 @@
 *.ipynb_checkpoints
+<<<<<<< HEAD
 *.DS_Store
 *_private
+=======
+>>>>>>> 61be8e4 (add example)
