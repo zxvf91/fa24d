@@ -1,0 +1,37 @@
+# Figure
+figure.figsize : 6, 6
+figure.facecolor : white
+
+# Axes
+axes.spines.top : False
+axes.spines.right : False
+
+# Legend
+legend.frameon : True
+legend.framealpha : 0.5
+legend.facecolor : F5F5F5
+legend.edgecolor : None
+legend.fontsize : 14
+
+# Colors
+# Trace webapp colors:  'black',  sharpBlue',  'map_yellow_dark', 'red', 'map_green', 'traceTeal, 'sharpDark', 'positiveLight'
+#axes.prop_cycle : cycler('color', ['000',  '63ADF2',  'E49825', 'F44336', 'A8CE5C', '2EC4B2', '227EBF', '60F2A7',])
+
+# Font
+font.family : avenir
+axes.titlesize : 12
+axes.labelsize : 12
+xtick.labelsize : 10
+ytick.labelsize : 10
+
+# Scatters
+scatter.edgecolors: face
+
+# Histograms
+hist.bins : 100
+
+# Boxplots
+boxplot.medianprops.color : black
+boxplot.meanprops.color : black
+boxplot.notch : False
+boxplot.showcaps : False
