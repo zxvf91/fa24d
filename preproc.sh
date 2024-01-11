@@ -1,11 +1,8 @@
 #!/bin/bash
-# Start in directory with only raw files
+# start in directory with only raw files
 
-# select first N lines to use as header
+# set first N lines to use as header
 HEADER_N=11
-
-# rename folders/files
-#for i in *; do newdir=`echo ${i// /_}`; mv $i $newdir; echo $newdir; done
 
 # create header
 for f in `ls *.csv` ; do
