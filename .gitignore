@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 *.DS_Store
+<<<<<<< HEAD
 *_private
 =======
 >>>>>>> 61be8e4 (add example)
@@ -16,5 +17,8 @@
 >>>>>>> bacfa2d (updates)
 =======
 .DS_Store
+=======
+_private
+>>>>>>> c4e9c89 (fix: ignore file type)
 __pycache__/
 >>>>>>> af8bb48 (update for verus oil pressure video)
