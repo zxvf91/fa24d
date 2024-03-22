@@ -1,6 +1,12 @@
 *.ipynb_checkpoints
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.DS_Store
 *_private
 =======
 >>>>>>> 61be8e4 (add example)
+=======
+*.csv
+*.DS_Store
+*_private
+>>>>>>> bacfa2d (updates)
