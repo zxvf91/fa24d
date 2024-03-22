@@ -1,4 +1,4 @@
 *.ipynb_checkpoints
 *.DS_Store
-*_private
+_private
 __pycache__/
