@@ -2,12 +2,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.DS_Store
 *_private
 =======
 >>>>>>> 61be8e4 (add example)
 =======
 *.csv
+=======
+>>>>>>> ff25dbe (chore: updates to ignore)
 *.DS_Store
 *_private
 >>>>>>> bacfa2d (updates)
