@@ -1,6 +1,7 @@
 *.ipynb_checkpoints
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.DS_Store
 *_private
 =======
@@ -10,3 +11,7 @@
 *.DS_Store
 *_private
 >>>>>>> bacfa2d (updates)
+=======
+.DS_Store
+__pycache__/
+>>>>>>> af8bb48 (update for verus oil pressure video)
