@@ -1,0 +1,31 @@
+{
+    "RaceChrono": {
+        "timestamp": true,
+        "lap_number": true,
+        "device_update_rate": true,
+        "distance_traveled": true,
+        "elapsed_time": true,
+        "latitude": true,
+        "longitude": true,
+        "speed": true,
+        "lateral_acc": true,
+        "longitudinal_acc": true,
+        "accelerator_pos": true,
+        "engine_oil_pressure": true,
+        "engine_oil_pressure_1": false,
+        "engine_oil_temp": true,
+        "rpm": true
+    },
+    "AIM": {
+        "Distance": true,
+        "Time": true,
+        "OilPressure0": false,
+        "PPS": false,
+        "GPS_LatAcc": true,
+        "GPS_LonAcc": true,
+        "RPM": true,
+        "GPS_Latitude": true,
+        "GPS_Longitude": true,
+        "GPS_Speed": true
+    }
+}
