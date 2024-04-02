@@ -1,0 +1,28 @@
+ {
+    "RaceChrono": {
+        "distance_traveled": "Distance (m)",
+        "elapsed_time": "Time",
+        "lap_number": "Lap Number",
+        "latitude": "GPS Latitude",
+        "longitude": "GPS Longitude",
+        "speed": "Speed (m/s)",
+        "lateral_acc": "GPS LatAcc",
+        "longitudinal_acc": "GPS LonAcc",
+        "accelerator_pos": "PPS",
+        "engine_oil_pressure": "OilPressure",
+        "engine_oil_pressure_1": "OilPressure0",
+        "engine_oil_temp": "EngineOilTemp",
+        "rpm": "RPM"
+        },
+    "AIM": {
+        "Distance": "Distance (km)",
+        "Time": "Time",
+        "OilPressure0": "OilPressure0",
+        "GPS_LatAcc": "GPS LatAcc",
+        "GPS_LonAcc": "GPS LonAcc",
+        "RPM": "RPM",
+        "GPS_Latitude": "GPS Latitude",
+        "GPS_Longitude": "GPS Longitude",
+        "GPS_Speed": "Speed (mph)"
+    }
+}
