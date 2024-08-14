@@ -17,4 +17,8 @@ for f in `ls *.csv` ; do
     sed -e '2,3d' ../${f} > ../clean.csv;
     
     mv ../clean.csv ../${f}
+<<<<<<< HEAD
 done
+=======
+done
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 import json
@@ -7,6 +10,7 @@ from typing import Dict, List
 
 import pandas as pd
 
+<<<<<<< HEAD
 =======
 =======
 from abc import ABC, abstractmethod
@@ -23,6 +27,8 @@ from abc import ABC
 =======
 
 >>>>>>> aa43760 (add column configs)
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
 import conversions as c
 
 @dataclass
@@ -31,6 +37,9 @@ class Session:
     fastest_lap: pd.DataFrame
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
     laps: List[pd.DataFrame]
     label: str
 
@@ -41,6 +50,7 @@ def downsample(df: pd.DataFrame, *, downsample_factor: int = 1) -> pd.DataFrame:
 
 class CSVReader(ABC):
     label: str
+<<<<<<< HEAD
 =======
     laps: list[pd.DataFrame]
 =======
@@ -61,14 +71,19 @@ class CsvReader(ABC):
 class CSVReader(ABC):
     label: str
 >>>>>>> aa43760 (add column configs)
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
 
     def __init__(self, filepath: str):
         self.filepath = filepath
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> aa43760 (add column configs)
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
     @property
     def use_cols(self) -> List[str]:
         return self._use_cols
@@ -94,6 +109,9 @@ class CSVReader(ABC):
 
     @abstractmethod
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
     def can_read(self) -> bool:
         pass
 
@@ -104,6 +122,7 @@ class CSVReader(ABC):
 
 class RaceChronoReader(CSVReader):
     label = "RaceChrono"
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> aa43760 (add column configs)
@@ -132,12 +151,17 @@ class RaceChronoCsvReader(CsvReader):
 class RaceChronoReader(CSVReader):
     label = "RaceChrono"
 >>>>>>> aa43760 (add column configs)
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
 
     def can_read(self) -> bool:
         first_line = open(self.filepath).readline()
         return first_line.startswith("This file is created using RaceChrono")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
 
     def read(self) -> pd.DataFrame:
         self.set_cols()
@@ -145,6 +169,7 @@ class RaceChronoReader(CSVReader):
 
         df = pd.read_csv(
             self.filepath,
+<<<<<<< HEAD
 =======
     
 =======
@@ -161,10 +186,13 @@ class RaceChronoReader(CSVReader):
 =======
             self.filepath,
 >>>>>>> aa43760 (add column configs)
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
             header=0,
             dtype={"lap_number": int},
             index_col=0,
             skiprows=list(range(0, 9)) + [10, 11],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             usecols=self.use_cols #["timestamp", "lap_number", "elapsed_time", "latitude", "longitude", "speed", "lateral_acc", "accelerator_pos", "engine_oil_pressure_1", "rpm"]
@@ -180,6 +208,11 @@ class RaceChronoReader(CSVReader):
         )
         df["engine_oil_pressure_psi"] = df["engine_oil_pressure"].apply(c.kpa_to_psi)
 >>>>>>> aa43760 (add column configs)
+=======
+            usecols=self.use_cols #["timestamp", "lap_number", "elapsed_time", "latitude", "longitude", "speed", "lateral_acc", "accelerator_pos", "engine_oil_pressure_1", "rpm"]
+        )
+        df["engine_oil_pressure_psi"] = df["engine_oil_pressure"].apply(c.kpa_to_psi)
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
         df["lateral_acc"] = df["lateral_acc"] * -1
 
         df.index = pd.to_datetime(df.index, unit="s")
@@ -188,11 +221,15 @@ class RaceChronoReader(CSVReader):
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
         lap_times = df.groupby('Lap Number')['Time'].agg(['min', 'max'])
         lap_times['Lap Time'] = lap_times['max'] - lap_times['min']
 
         df = df.merge(lap_times['Lap Time'], left_on='Lap Number', right_index=True)
 
+<<<<<<< HEAD
 =======
         lap_times = df.groupby('Lap Number')['elapsed_time'].agg(['min', 'max'])
         lap_times['Lap Time'] = lap_times['max'] - lap_times['min']
@@ -207,11 +244,14 @@ class RaceChronoReader(CSVReader):
         df = df.merge(lap_times['Lap Time'], left_on='Lap Number', right_index=True)
 
 >>>>>>> aa43760 (add column configs)
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
         df = df[df['Lap Time'] > 30]
 
         return df
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 class AIMReader(CSVReader):
@@ -225,10 +265,16 @@ class AIMReader(CSVReader):
     label = "AIM"
 
 >>>>>>> aa43760 (add column configs)
+=======
+class AIMReader(CSVReader):
+    label = "AIM"
+
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
     def get_lap_metadata(self) -> pd.DataFrame:
         metadata = pd.read_csv(self.filepath, nrows=2, skiprows=11, header=None).transpose()
         metadata.columns = ["marker", "lap_time"]
         metadata = metadata.drop(0)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -238,6 +284,9 @@ class AIMReader(CSVReader):
 =======
 
 >>>>>>> aa43760 (add column configs)
+=======
+
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
         metadata["marker"] = metadata["marker"].astype(float)
         metadata["lap_time"] = metadata["lap_time"].apply(c.time_string_to_s)
 
@@ -247,8 +296,11 @@ class AIMReader(CSVReader):
         first_line = open(self.filepath).readline()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> aa43760 (add column configs)
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
         return first_line.startswith("Format,AIM CSV")
 
     def read(self) -> pd.DataFrame:
@@ -256,6 +308,9 @@ class AIMReader(CSVReader):
         self.set_col_name_mapping()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
         df = pd.read_csv(
             self.filepath,
             header=0,
@@ -280,6 +335,7 @@ class AIMReader(CSVReader):
 
         return df
 
+<<<<<<< HEAD
 readers = [RaceChronoReader, AIMReader]
 =======
         return first_line.startswith('"Format","AiM CSV File"')
@@ -318,3 +374,6 @@ readers = [RaceChronoCsvReader, AimCsvReader]
 
 readers = [RaceChronoReader, AIMReader]
 >>>>>>> aa43760 (add column configs)
+=======
+readers = [RaceChronoReader, AIMReader]
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
