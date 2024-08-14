@@ -18,7 +18,11 @@ for f in `ls *.csv` ; do
     
     mv ../clean.csv ../${f}
 <<<<<<< HEAD
+<<<<<<< HEAD
 done
+=======
+done
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
 =======
 done
 >>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5

@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+import numpy as np
+
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
+=======
 import numpy as np
 
 >>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
@@ -22,7 +27,11 @@ def s_to_time_string(s: float) -> str:
 
 def kpa_to_psi(kpa: float) -> float:
 <<<<<<< HEAD
+<<<<<<< HEAD
     return kpa*0.1456038
+=======
+    return kpa*0.1456038
+>>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
 =======
     return kpa*0.1456038
 >>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5

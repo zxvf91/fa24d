@@ -1,30 +1,5 @@
 *.ipynb_checkpoints
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 *.DS_Store
-<<<<<<< HEAD
 *_private
-=======
->>>>>>> 61be8e4 (add example)
-=======
 *.csv
-=======
->>>>>>> ff25dbe (chore: updates to ignore)
-*.DS_Store
-*_private
->>>>>>> bacfa2d (updates)
-=======
-.DS_Store
-=======
-_private
->>>>>>> c4e9c89 (fix: ignore file type)
 __pycache__/
->>>>>>> af8bb48 (update for verus oil pressure video)
-=======
-*.DS_Store
-*_private
-__pycache__/
->>>>>>> 62dcb627f486a3eb5990c39ee417e5f349d9d7b5
