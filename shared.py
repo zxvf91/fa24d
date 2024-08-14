@@ -75,7 +75,6 @@ class RaceChronoReader(CSVReader):
         df = pd.read_csv(
             self.filepath,
             header=0,
-            dtype={"lap_number": int},
             index_col=0,
             skiprows=list(range(0, 9)) + [10, 11],
             usecols=self.use_cols #["timestamp", "lap_number", "elapsed_time", "latitude", "longitude", "speed", "lateral_acc", "accelerator_pos", "engine_oil_pressure_1", "rpm"]
